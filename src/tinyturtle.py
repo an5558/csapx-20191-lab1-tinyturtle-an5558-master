@@ -8,7 +8,17 @@ and then does turtle drawing from it.
 author: Ayane Naito
 """
 def evaluate(input_cmd):
-    
+    command_q = input_cmd.split()
+    for cmd in command_q:
+        if cmd[0] == 'F':
+            tt.forward(int(cmd[1::]))
+        elif cmd[0] == 'L':
+            tt.left(int(cmd[1::]))
+        elif cmd[0] == 'U':
+            tt.up()
+        elif cmd[0] == 'D':
+            tt.down()
+       
 
 def main() -> None:
     """
