@@ -18,7 +18,10 @@ def evaluate(input_cmd):
             tt.up()
         elif cmd[0] == 'D':
             tt.down()
-       
+        elif cmd[0] == 'B':
+            tt.backward(int(cmd[1::]))
+        else:
+            tt.circle(int(cmd[1::]))
 
 def main() -> None:
     """
