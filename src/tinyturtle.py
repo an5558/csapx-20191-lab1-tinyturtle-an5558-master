@@ -1,4 +1,4 @@
-import turtle as tt
+import turtle
 """
 CSAPX Lab 1: Tiny Turtle
 
@@ -8,22 +8,28 @@ and then does turtle drawing from it.
 author: Ayane Naito
 """
 def evaluate(input_cmd):
+    """
+    Interprets basic TT commands submitted by the user into turtle commands.
+    Returns a message when program is done drawing shape.
+    :param input_cmd: Basic TT command string inputted by user
+    :return: None
+    """
     command_q = input_cmd.split()
     for cmd in command_q:
         if cmd[0] == 'F':
-            tt.forward(int(cmd[1::]))
+            turtle.forward(int(cmd[1::]))
         elif cmd[0] == 'L':
-            tt.left(int(cmd[1::]))
+            turtle.left(int(cmd[1::]))
         elif cmd[0] == 'R':
-            tt.right(int(cmd[1::]))
+            turtle.right(int(cmd[1::]))
         elif cmd[0] == 'U':
-            tt.up()
+            turtle.up()
         elif cmd[0] == 'D':
-            tt.down()
+            turtle.down()
         elif cmd[0] == 'B':
-            tt.backward(int(cmd[1::]))
+            turtle.backward(int(cmd[1::]))
         else:
-            tt.circle(int(cmd[1::]))
+            turtle.circle(int(cmd[1::]))
     print("Shape drawn. Close graphics window when done.")
 
 def main() -> None:
@@ -34,6 +40,6 @@ def main() -> None:
     """
     user_cmd = input("Enter a string containing basic TT commands: ")
     evaluate(user_cmd)
-    tt.mainloop()
+    turtle.mainloop()
 if __name__ == '__main__':
     main()
