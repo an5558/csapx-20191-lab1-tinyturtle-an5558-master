@@ -14,6 +14,8 @@ def evaluate(input_cmd):
             tt.forward(int(cmd[1::]))
         elif cmd[0] == 'L':
             tt.left(int(cmd[1::]))
+        elif cmd[0] == 'R':
+            tt.right(int(cmd[1::]))
         elif cmd[0] == 'U':
             tt.up()
         elif cmd[0] == 'D':
@@ -22,6 +24,7 @@ def evaluate(input_cmd):
             tt.backward(int(cmd[1::]))
         else:
             tt.circle(int(cmd[1::]))
+    print("Shape drawn. Close graphics window when done.")
 
 def main() -> None:
     """
